@@ -1,0 +1,23 @@
+<ngx-datatable 
+  class="bootstrap"
+  [rows]="rows"
+  [columns]="columns"
+  [loadingIndicator]="loadingIndicator"
+  [columnMode]="'force'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [rowHeight]="'auto'"
+  [columns]="columns"
+  [reorderable]="reorderable"
+  ngx-datatable-column-draggable="true"
+  ngx-datatable-row-draggable="true">
+  <ngx-datatable-column name="ID" prop="id"></ngx-datatable-column>
+  <ngx-datatable-column name="Date" prop="dateef"></ngx-datatable-column>
+  <ngx-datatable-column name="Credit" prop="credit"></ngx-datatable-column>
+  <ngx-datatable-column name="Debit" prop="debit"></ngx-datatable-column>
+</ngx-datatable>
+<ngx-pagination [itemsPerPage]="page.size"
+                [totalItems]="page.totalElements"
+                (pageChange)="onPageChange($event)"
+                >
+</ngx-pagination>

@@ -1,0 +1,42 @@
+// my-component.component.scss or styles.scss (global stylesheet)
+.ngx-datatable.bootstrap {
+    .datatable-header {
+      .datatable-header-cell {
+        border-bottom-color: black;
+      }
+    }
+    .datatable-body {
+      .datatable-body-row {
+        border-top-color: black;
+        &.datatable-row-even {
+          background-color:beige;
+        }
+        .datatable-body-cell {
+          text-align: left; // RTL fix
+        }
+      }
+    }
+    .datatable-footer {
+      background: beige;
+      .datatable-pager {
+        text-align: right; // RTL fix
+        ul {
+          li {
+            &:not(.disabled) {
+              a {
+                color:gainsboro;
+              }
+              &.active,
+              &:hover {
+                a {
+                  background-color:darkorchid;
+                  color:white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
